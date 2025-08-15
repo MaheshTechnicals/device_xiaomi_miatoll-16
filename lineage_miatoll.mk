@@ -31,6 +31,9 @@ WITH_BCR := true
 TARGET_USES_CORE_GAPPS := true
 TARGET_DEFAULT_PIXEL_LAUNCHER := false
 
+# Include signing keys
+include vendor/lineage-priv/keys/keys.mk
+
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
