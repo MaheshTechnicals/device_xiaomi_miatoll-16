@@ -81,3 +81,7 @@ ro.vendor.perf.scroll_opt=true
 debug.cpurend.vsync=false
 persist.debug.wfd.enable=1
 vendor.sys.video.disable.ubwc=1
+
+
+# Maintainer info
+ro.paranoid.maintainer=Mahesh Technicals

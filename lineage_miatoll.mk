@@ -10,7 +10,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/non_ab_device.mk)
 
 # Inherit some common Lineage stuff.
-$(call inherit-product, vendor/clover/config/common_full_phone.mk)
+$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 # Inherit from miatoll device
 $(call inherit-product, device/xiaomi/miatoll/atoll.mk)
@@ -19,17 +19,18 @@ $(call inherit-product, device/xiaomi/miatoll/atoll.mk)
 TARGET_SCREEN_HEIGHT := 2400
 TARGET_SCREEN_WIDTH := 1080
 
-PRODUCT_NAME := clover_miatoll
+PRODUCT_NAME := lineage_miatoll
 PRODUCT_DEVICE := miatoll
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_BRAND := Redmi
 PRODUCT_MODEL := SM6250
 
-# Clover assortment
-TARGET_FACE_UNLOCK_SUPPORTED := true
-TARGET_SUPPORTS_GOOGLE_RECORDER := true
-TARGET_SUPPORTS_QUICK_TAP := true
-USE_PIXEL_CHARGER := true
+#Lunaris-AOSP:
+TARGET_OPTIMIZED_DEXOPT := true
+WITH_BCR := true
+TARGET_USES_CORE_GAPPS := true
+TARGET_DEFAULT_PIXEL_LAUNCHER := false
+
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
