@@ -202,3 +202,7 @@ WPA_SUPPLICANT_VERSION := VER_0_8_X
 
 # Inherit proprietary blobs
 include vendor/xiaomi/miatoll/BoardConfigVendor.mk
+
+# Disable cuttlefish package (not needed for physical devices)
+PRODUCT_PACKAGES_REMOVE += \
+    cvd-host_package
