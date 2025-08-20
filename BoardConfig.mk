@@ -203,6 +203,7 @@ WPA_SUPPLICANT_VERSION := VER_0_8_X
 # Inherit proprietary blobs
 include vendor/xiaomi/miatoll/BoardConfigVendor.mk
 
-# Disable cuttlefish package (not needed for physical devices)
-PRODUCT_PACKAGES_REMOVE += \
-    cvd-host_package
+# Fully disable cuttlefish cvd-host_package to avoid Soong errors
+SOONG_CONFIG_NAMESPACES += miatoll
+SOONG_CONFIG_miatoll += disable_cvd
+SOONG_CONFIG_miatoll_disable_cvd := true
